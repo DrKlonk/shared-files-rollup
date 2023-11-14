@@ -2,9 +2,10 @@
   "name": "server",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "private": "true",
   "scripts": {
-    "build": "rimraf dist && tsc && rollup -c",
+    "build": "rimraf dist && webpack",
+    "tsc": "tsc",
     "start": "node dist/index.js"
   },
   "author": "",
@@ -15,8 +16,12 @@
     "@tsconfig/node18-strictest-esm": "^1.0.1",
     "@types/node": "^20.9.0",
     "rimraf": "^5.0.5",
-    "rollup": "^4.4.1",
+    "ts-loader": "^9.5.0",
     "tslib": "^2.6.2",
-    "typescript": "^5.2.2"
+    "typescript": "^5.2.2",
+    "webpack": "^5.89.0"
+  },
+  "devDependencies": {
+    "webpack-cli": "^5.1.4"
   }
 }
