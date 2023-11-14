@@ -1,0 +1,22 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "rimraf dist && tsc && rollup -c",
+    "start": "node dist/app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-typescript": "^11.1.5",
+    "@tsconfig/node18-strictest-esm": "^1.0.1",
+    "@types/node": "^20.9.0",
+    "rimraf": "^5.0.5",
+    "rollup": "^4.4.1",
+    "tslib": "^2.6.2",
+    "typescript": "^5.2.2"
+  }
+}

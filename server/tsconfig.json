@@ -1,0 +1,39 @@
+{
+  "extends": "@tsconfig/node18-strictest-esm/tsconfig.json",
+  "include": ["index.ts"],
+  "compilerOptions": {
+    "types": ["node"],
+    "target": "ESNext",
+    "module": "ESNext",
+    "lib": ["ESNext", "dom"],
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "noEmit": true,
+    "baseUrl": ".",
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "removeComments": true,
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "forceConsistentCasingInFileNames": true,
+    "ignoreDeprecations": "5.0"
+  },
+  "watchOptions": {
+    // Use native file system events for files and directories
+    "watchFile": "useFsEvents",
+    "watchDirectory": "useFsEvents",
+
+    // Poll files for updates more frequently
+    // when they're updated a lot.
+    "fallbackPolling": "dynamicPriority",
+
+    // Don't coalesce watch notification
+    "synchronousWatchDirectory": true,
+
+    // Finally, additional settings for reducing the amount of possible
+    // files to track  work from these directories
+    "excludeDirectories": ["**/node_modules", "_build"]
+  },
+  "exclude": ["node_modules"]
+}
