@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "rimraf dist && tsc && rollup -c",
-    "start": "node dist/app.js"
+    "start": "node dist/index.js"
   },
   "author": "",
   "license": "ISC",
