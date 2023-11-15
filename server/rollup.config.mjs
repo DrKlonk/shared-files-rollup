@@ -5,7 +5,7 @@ import nodeResolve from '@rollup/plugin-node-resolve';
 
 
 export default defineConfig({
-    input: ['index.ts'],
+    input: ['src/index.ts', '../shared/constants.ts'],
     output: {
       dir: 'dist',
       format: 'cjs',
@@ -13,6 +13,8 @@ export default defineConfig({
     },
     plugins: [
       nodeResolve({ preferBuiltins: true }),
-      typescript(),
-    ]
+      typescript({
+        include: ['./**/*.ts', '../shared/*.ts']
+      }),
+    ],
   });
